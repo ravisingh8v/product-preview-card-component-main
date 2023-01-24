@@ -1,0 +1,116 @@
+// css reset 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+// helper classes //
+// flex properties
+.d-flex{
+    display: flex;
+}
+.flex-center{
+    @include flex-center;
+}
+.flex-column{
+    flex-direction: column;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.align-items-center{
+    align-items: center;
+}
+
+// widths 
+.w-25{
+    width: 25%;
+}
+.w-50{
+    width: 50%;
+}
+.w-75{
+    width: 75%;
+}
+.w-100{
+    width: 100%;
+}
+
+// Heights 
+.h-25{
+    height:25%;
+}
+.h-50{
+    height:50%;
+}
+.h-75{
+    height:75%;
+}
+.h-100{
+    height:100%;
+}
+
+
+
+// Font Weight
+.fw-bolder{
+    font-weight: 700;
+}
+.fw-normal{
+    font-weight: 400;
+}
+.fw-bold{
+    font-weight: 500;
+}
+.fw-lighter{
+    font-weight: 200;
+}
+
+
+
+// CUSTOM CSS 
+.main_wrapper{
+    background-color: $secondary;
+}
+.container{
+    border-radius: 10px;
+    height: 600px;
+    background-color: white;
+
+}
+.image_wrapper{
+   height: 100%;
+   overflow: hidden;
+   border-radius: 10px 0px 0px 10px;
+    img{
+     width: 100%;
+     height: 100%;
+    }
+}
+.perfume{
+    color: $darkgrayisblue;
+    letter-spacing: 4px;
+}
+.title{
+    color:$darkblue ;
+}
+.description{
+    color: $darkgrayisblue;
+}
+.offer-price{
+color: $primary;
+}
+.price{
+color: $darkgrayisblue;
+}
+.add_to_cart{
+    background-color: $primary;
+    border: none;
+    color: $White;
+}

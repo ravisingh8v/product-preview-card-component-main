@@ -1,0 +1,80 @@
+
+$spacer: (
+    0: 0,
+    1: 5,
+    2: 10,
+    3: 15,
+    4: 20,
+    5: 30,
+    6:40,
+    7:50,
+    auto: 'auto'
+  );
+
+// for padding 
+@each $key,$value in $spacer {
+    .p-#{$key}{
+        padding: #{$value}px;
+    }
+    .pt-#{$key}{
+        padding-top: #{$value}px;
+    }
+    .pl-#{$key}{
+        padding-left: #{$value}px;
+    }
+    .pr-#{$key}{
+        padding-right: #{$value}px;
+    }
+    .pb-#{$key}{
+        padding-bottom: #{$value}px;
+    }
+    .px-#{$key}{
+        @include px(#{$value}px)
+    }
+    .py-#{$key}{
+        @include py(#{$value}px)
+    }
+    
+}
+
+@each $key,$value in $spacer{
+    .m-#{$key}{
+padding: #{$value}px;
+    }
+    .mt-#{$key}{
+        padding-top: #{$value}px;
+    }
+    .ms-#{$key}{
+        padding-left: #{$value}px;
+    }
+    .me-#{$key}{
+        padding-right: #{$value}px;
+    }
+    .mb-#{$key}{
+        padding-bottom: #{$value}px;
+    }
+    .mx-#{$key}{
+        @include mx(#{$value}px);
+    }
+    .my-#{$key}{
+        @include my(#{$value}px);
+    }
+}
+
+$font:(
+0: 0,
+1: 38,
+2: 28,
+3: 24,
+4: 20,
+5: 16,
+6: 12,
+7: 8,
+8: 4
+);
+
+@each $key,$value in $font{
+    .fs-#{$key}{
+        font-size: #{$value}px;
+    }
+}
