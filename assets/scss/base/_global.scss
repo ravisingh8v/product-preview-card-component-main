@@ -1,116 +1,176 @@
-// css reset 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+// css reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html,body{
-    height: 100%;
-    width: 100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
 }
 
 // helper classes //
+.d-none {
+  display: none;
+}
 // flex properties
-.d-flex{
-    display: flex;
+.d-flex {
+  display: flex;
 }
-.flex-center{
-    @include flex-center;
+.flex-center {
+  @include flex-center;
 }
-.flex-column{
-    flex-direction: column;
+.flex-column {
+  flex-direction: column;
 }
-.justify-between{
-    justify-content: space-between;
+.justify-between {
+  justify-content: space-between;
 }
-.align-items-center{
-    align-items: center;
-}
-
-// widths 
-.w-25{
-    width: 25%;
-}
-.w-50{
-    width: 50%;
-}
-.w-75{
-    width: 75%;
-}
-.w-100{
-    width: 100%;
+.align-items-center {
+  align-items: center;
 }
 
-// Heights 
-.h-25{
-    height:25%;
+// widths
+.w-25 {
+  width: 25%;
 }
-.h-50{
-    height:50%;
+.w-50 {
+  width: 50%;
 }
-.h-75{
-    height:75%;
+.w-75 {
+  width: 75%;
 }
-.h-100{
-    height:100%;
+.w-100 {
+  width: 100%;
 }
 
-
+// Heights
+.h-25 {
+  height: 25%;
+}
+.h-50 {
+  height: 50%;
+}
+.h-75 {
+  height: 75%;
+}
+.h-100 {
+  height: 100%;
+}
 
 // Font Weight
-.fw-bolder{
-    font-weight: 700;
+.fw-bolder {
+  font-weight: 700;
 }
-.fw-normal{
-    font-weight: 400;
+.fw-normal {
+  font-weight: 400;
 }
-.fw-bold{
-    font-weight: 500;
+.fw-bold {
+  font-weight: 500;
 }
-.fw-lighter{
-    font-weight: 200;
+.fw-lighter {
+  font-weight: 200;
 }
 
-
-
-// CUSTOM CSS 
-.main_wrapper{
-    background-color: $secondary;
+// color
+.text-white {
+  color: $White;
 }
-.container{
-    border-radius: 10px;
-    height: 600px;
-    background-color: white;
 
+.text-nowrap {
+  white-space: nowrap;
 }
-.image_wrapper{
-   height: 100%;
-   overflow: hidden;
-   border-radius: 10px 0px 0px 10px;
-    img{
-     width: 100%;
-     height: 100%;
+
+// CUSTOM CSS
+.main_wrapper {
+  background-color: $secondary;
+}
+.container {
+  height: 450px;
+}
+
+.desk-img {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 10px 0 0 10px;
+  img {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+  }
+  @media (max-width: 576px) {
+    display: none;
+  }
+}
+.mob-img {
+  @media (max-width: 576px) {
+    display: block;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    img {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      height: 300px;
     }
+  }
 }
-.perfume{
+// card
+.card {
+  background-color: $White;
+  border-radius: 0 10px 10px 0;
+  .perfume {
     color: $darkgrayisblue;
-    letter-spacing: 4px;
-}
-.title{
-    color:$darkblue ;
-}
-.description{
+  }
+  .title {
+    color: $darkblue;
+  }
+  .description {
     color: $darkgrayisblue;
+  }
+  .offer_rate {
+    color: $primary;
+  }
+  .rate {
+    color: $darkgrayisblue;
+  }
+  @media (max-width: 576px) {
+    width: 300px;
+    border-radius: 0 0 10px 10px;
+  }
 }
-.offer-price{
-color: $primary;
+.add_to_cart {
+  border: 0;
+  background-color: $primary;
+  color: $White;
+  border-radius: 10px;
 }
-.price{
-color: $darkgrayisblue;
+
+@media (max-width: 576px) {
+  .container {
+    flex-direction: column;
+    height: 700px;
+    width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
-.add_to_cart{
-    background-color: $primary;
-    border: none;
-    color: $White;
-}
+// @media (max-width:768px) {
+//     .image_wrapper{
+//         width: 100%;
+//     }
+//     .mob-img{
+//         display: block;
+//     }
+//     .main_wrapper{
+//         align-items: unset;
+//     }
+//     .desk-img{
+//         display: none;
+//     }
+// }
